@@ -18,7 +18,7 @@ def is_prime(x):
     솟수이면 True
     솟수가 아니면 False'''
     for i in range(2, x):
-        if x % i != 0:
+        if x % i == 0:
             return False
     return True
 
@@ -26,7 +26,7 @@ def is_prime(x):
 def solution():
     '''최대소인수 찾기'''
 
-    num = 1024  # 문제의 수
+    num = 600851475143  # 문제의 수
     factors = []  # 소인수 목록
     factor = 2  # 2부터 num의 소인수인지 확인 시작
     while factor <= num:
