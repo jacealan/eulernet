@@ -72,7 +72,6 @@ def solution():
         print(newsums)
         oldsums = newsums
 
-    sums = []
     print(max([j for i in newsums for j in i]))
 
 
