@@ -19,7 +19,7 @@ def solution():
     '''피보나치 수열'''
 
     fibonacci = [1, 2]
-    while fibonacci[-1] < 4000000:  # 수열 마지막값이 4000000 넘지 않도록
+    while fibonacci[-1] <= 4000000:  # 수열 마지막값이 4000000 넘지 않도록
         fibonacci.append(fibonacci[-2] + fibonacci[-1])
     fibonacci.pop()  # 4000000이 넘는 마지막값 제거
     even_value = [x for x in fibonacci if x % 2 == 0]
