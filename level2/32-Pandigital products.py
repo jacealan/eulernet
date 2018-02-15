@@ -55,7 +55,6 @@ def solution():
     cs = []
 
     for nums in nums_list:
-        # print(nums)
         for i in range(1, len(nums_full[:]) - 1):
             for j in range(i + 1, len(nums_full[:])):
                 a = int(''.join(nums[0:i]))
@@ -64,13 +63,6 @@ def solution():
                 if a * b == c:
                     print(a, '*', b, '=', c)
                     cs.append(c)
-                # print(nums)
-                # eq = nums[:]
-                # eq.insert(i, '*')
-                # eq.insert(j + 1, '=')
-                # print(''.join(eq))
-                # print(''.join(nums[0:i]), ''.join(
-                #     nums[i:j]), ''.join(nums[j:]))
     print(sum(list(set(cs))))
 
 
