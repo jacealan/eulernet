@@ -58,6 +58,41 @@ def is_palindrome(x):
     return True
 
 
+def digit_list(digit, nums=[], n=['0', '1', '2', '3', '4']):
+    '''자리수 만들기
+
+    n = ['1', '2', '3', '4']
+    digits = digit_list(3, n, n)
+    print(digits[1])
+    '''
+    if digit == 1:
+        # print(nums)
+        return 0, nums, n
+    new_nums = []
+    for num in nums[:]:
+        for i in n:
+            new_nums.append(num + i)
+            # print(new_nums)
+
+    return digit_list(digit - 1, new_nums, n)
+
+
+def pandigital_list(digit, nums=[], n=['0', '1', '2', '3', '4']):
+    '''Pandigital 만들기
+
+    n = ['1', '2', '3', '4']
+    pandigitals = pandigital_list(3, n, n)
+    print(pandigitals[1])
+    '''
+    if digit == 1:
+        return 0, nums, n
+    new_nums = []
+    for num in nums[:]:
+        for i in sorted(list(set(n) - set(num))):
+            new_nums.append(num + i)
+    return pandigital_list(digit - 1, new_nums, n)
+
+
 def solution():
     pass
 
